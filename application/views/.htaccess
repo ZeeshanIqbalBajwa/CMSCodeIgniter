@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond $1 !^(page\.php|assets|imgs|js|css|uploades|public|templetes|styles.css)
+RewriteCond %(Request_FILENAME) !-f
+RewriteCond %(Request_FILENAME) !-d
+RewriteRule ^(.*)$ ./index1.php/$1 [L]
